@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             x:Class="Lands.Views.Agregar">
+    <ContentPage.Content>
+        <ScrollView
+            BindingContext="{Binding Agregar}">
+            <StackLayout
+                Padding="10,30">
+                <Grid 
+                    Margin="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Source="Contenido"
+                        HorizontalOptions="CenterAndExpand">
+                    </Image>
+
+                    <Entry 
+                         Grid.Row="0"
+                         Grid.Column="1"
+                         Text="{Binding Articulos, Mode=TwoWay}"
+                         Placeholder="Escribe el articulo" 
+                        VerticalOptions="Center">
+                    </Entry>
+
+                    <Label 
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Font="Time New Roman"
+                        Text="Cantid"
+                        VerticalOptions="Center">
+                    </Label>
+
+                    <Entry 
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Text="{Binding Cantidad, Mode=TwoWay}"
+                        Placeholder="Cantidad de articulos"
+                        Keyboard="Numeric">
+                    </Entry>
+
+                    <Label 
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Text="Watts"
+                        VerticalOptions="Center">
+                    </Label>
+
+                    <Entry 
+                        
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Text="{Binding Whatts, Mode=TwoWay}"
+                        Placeholder="Cantidad de Watts"
+                        Keyboard="Numeric">
+                    </Entry>
+
+                    <Label 
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        Text="Cant"
+                        VerticalOptions="Center">
+                    </Label>
+
+                    <Entry
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        Text="{Binding Horas, Mode=TwoWay}"
+                        Placeholder="Cantida de horas en uso"
+                        Keyboard="Numeric">
+                    </Entry>
+                </Grid>
+
+                <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                    Padding="90,5">
+                    <Button
+                        FontFamily="Time New Roman"
+                        Text="Agregar"  
+                        Command="{Binding AgregarCommand}"
+                        BackgroundColor="#116fb8"
+                        BorderRadius="12">
+                    </Button>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

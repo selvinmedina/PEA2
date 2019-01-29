@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             x:Class="Lands.Views.TipsAhorro"
+             Title="Tips">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BindingContext="{Binding Energia}"
+                         Padding="8"
+                         BackgroundColor="White">
+                <Label Text="Iluminnación"
+                       TextColor="Blue"
+                       FontSize="40"
+                       HorizontalTextAlignment="Center"
+                       />
+                <Image/>
+                <Label Text="1 - Apagar las luces al dejar una habitación. Haciendo esto se puede ahorrar entre el 8 y el 20 por ciento de la energía destinada a la iluminación."
+                       TextColor="Black"
+                       FontSize="14"
+                       HorizontalTextAlignment="Start"
+                       />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+
+<!--<ContentPage.Content>
+        <ScrollView>
+        <StackLayout
+            BindingContext="{Binding Energia}"
+            Padding="5">
+            <ListView
+                HasUnevenRows="True"
+                IsPullToRefreshEnabled="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackLayout
+                                    Grid.Column="0"
+                                    VerticalOptions="Center">
+                                        <Label FontAttributes="Bold"
+                                           FontSize="Medium"
+                                           Text="Formas de Ahorrar Energia"
+                                           TextColor="Black">
+                                        </Label>
+                                        <Editor
+                                            Text="Una Buena forma de ahorra Energia es de verificar 
+                                            los aparato que estan consumiendo la mañor parte y asegurar 
+                                            de conectarlos cuando los ocupes">
+                                        </Editor>
+                                    </StackLayout>
+                                    <StackLayout
+                                    Grid.Column="1"
+                                    VerticalOptions="Center">
+                                        <Label FontAttributes="Bold"
+                                           FontSize="Medium"
+                                           Text="Formas de Ahorrar Energia"
+                                           TextColor="Black">
+                                        </Label>
+                                        <Editor
+                                            Text="Una Buena forma de ahorra Energia es de verificar 
+                                            los aparato que estan consumiendo la mañor parte y asegurar 
+                                            de conectarlos cuando los ocupes">
+                                        </Editor>
+                                    </StackLayout>
+                                </Grid>
+                                <ImageButton
+                                    Source="Agregar"
+                                    Command="{Binding AgregarObjeto}"
+                                    HorizontalOptions="EndAndExpand">
+                                </ImageButton>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>-->

@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lands.Views.LoginPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Padding="3">
+
+    <ContentPage.Content>
+        <ScrollView 
+            BindingContext="{Binding Login}">
+            <StackLayout
+                    Padding="2,20">
+                <StackLayout
+                    HorizontalOptions="CenterAndExpand">
+                    <Label 
+                        Font="Time New Roman" 
+                       FontAttributes="Bold" 
+                       FontSize="50"
+                       HorizontalOptions="Center"
+                       Text="PEA">
+                    </Label>
+
+                    <Label 
+                       Font="Italic" 
+                       FontAttributes="Bold" 
+                       FontSize="Small"
+                       HorizontalOptions="Center"
+                       Text="Prestaciones Energia Ahorro">
+                    </Label>
+                </StackLayout>
+
+                <Grid Margin="2,20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="9*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Source="Email"
+                        HorizontalOptions="Center">
+                    </Image>
+
+                    <Entry 
+                         Grid.Row="0"
+                         Grid.Column="1"
+                         Placeholder="Escribe tu correo" 
+                         Keyboard="Email"
+                         Text="{Binding Email, Mode=TwoWay}"
+                        VerticalOptions="Center">
+                    </Entry>
+
+                    <Image
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Source="Menu"
+                        HorizontalOptions="Center">
+                    </Image>
+
+                    <Entry 
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        IsPassword="True" 
+                        Text="{Binding Contraseña, Mode=TwoWay}"
+                        Placeholder="Escribe tu contraseña">
+                    </Entry>
+                </Grid>
+
+                <StackLayout
+                    Padding="5,5"
+                    Orientation="Horizontal">
+                    <Label 
+                        Text="Recordar en este dispositivo"
+                        VerticalOptions="StartAndExpand"
+                        HorizontalOptions="FillAndExpand">
+                    </Label>
+
+                    <Switch
+                        HorizontalOptions="End"
+                        IsToggled="{Binding Recordar, Mode=TwoWay}">
+                    </Switch>
+                </StackLayout>
+
+                <Label 
+                    Text="¿Olvidaste tu contraseña?"
+                    HorizontalOptions="Center"
+                    TextColor="Blue">
+                </Label>
+
+                <StackLayout 
+                        Margin="30,15">
+                    <Button 
+                        Text="Login "
+                        BackgroundColor="#116fb8" 
+                        TextColor="White" 
+                        Command="{Binding IngresarCommand}"
+                        IsEnabled="{Binding Apagado, Mode=TwoWay}"
+                        HeightRequest="46"
+                        BorderRadius="23">
+                    </Button>
+
+                    <Button 
+                        Text="Registrar"
+                        BackgroundColor="DarkRed" 
+                        HeightRequest="46"
+                        IsEnabled="{Binding Apagado, Mode=TwoWay}"
+                        TextColor="White" 
+                        BorderRadius="23">
+
+                    </Button>
+                </StackLayout>
+
+                <StackLayout 
+                    Orientation="Horizontal" 
+                    HorizontalOptions="Center">
+
+                    <Image
+                        Source="face"
+                        WidthRequest="60">
+                    </Image>
+
+                    <Image 
+                        Source="twitter"
+                        WidthRequest="60">
+                    </Image>
+
+                    <Image 
+                        Source="Instagran"
+                        WidthRequest="60">
+                    </Image>
+
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+
+
+</ContentPage>
