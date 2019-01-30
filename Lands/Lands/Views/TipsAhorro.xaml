@@ -3,8 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              x:Class="Lands.Views.TipsAhorro"
-             Title="Tips">
-    <ListView ItemsSource="{Binding Valoor, Mode=TwoWay}" HasUnevenRows="True">
+             x:Class=""
+             Title="Tips de ahorro">
+    <ListView ItemsSource="{Binding CollectionM_Views, Mode=TwoWay}" HasUnevenRows="True">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
