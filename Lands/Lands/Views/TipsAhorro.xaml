@@ -4,5 +4,26 @@
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              x:Class="Lands.Views.TipsAhorro"
              Title="Tips">
-
+    <ListView ItemsSource="{Binding Valoor, Mode=TwoWay}" HasUnevenRows="True">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <StackLayout Grid.Column="1" Grid.Row="0">
+                            <Image Source="{Binding Imagen}" Grid.Column="0" Grid.Row="0"/>
+                            <Label Text="{Binding Titulo}" TextColor="Blue"/>
+                            <Label Text="{Binding Intro}" TextColor="Black"/>
+                        </StackLayout> 
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 </ContentPage>
