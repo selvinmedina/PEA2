@@ -34,7 +34,7 @@
                         Grid.Row="1"
                         Grid.Column="0"
                         Font="Time New Roman"
-                        Text="Cantid"
+                        Text="Cantidad"
                         VerticalOptions="Center">
                     </Label>
 

@@ -9,12 +9,13 @@ using Xamarin.Forms.Xaml;
 
 namespace Lands.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class TipsAhorro : ContentPage
-	{
-		public TipsAhorro ()
-		{
-			InitializeComponent ();
-		}
-	}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class TipsAhorro : ContentPage
+    {
+        public TipsAhorro()
+        {
+            InitializeComponent();
+            BindingContext = new ViewModelTips();
+        }
+    }
 }

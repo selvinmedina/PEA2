@@ -20,6 +20,12 @@
             get;
             set;
         }
+
+        public ViewModelTips Tips
+        {
+            get;
+            set;
+        }
         #endregion
 
         #region Constructores 

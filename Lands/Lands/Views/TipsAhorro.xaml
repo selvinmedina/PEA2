@@ -4,8 +4,8 @@
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              x:Class="Lands.Views.TipsAhorro"
              x:Class=""
-             Title="Tips de ahorro">
-    <ListView ItemsSource="{Binding CollectionM_Views, Mode=TwoWay}" HasUnevenRows="True">
+             Title="Tips de ahorroo">
+    <ListView ItemsSource="{Binding CollectionM_Views, Mode=TwoWay}" HasUnevenRows="True" BindingContext="{Binding Tips}">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
