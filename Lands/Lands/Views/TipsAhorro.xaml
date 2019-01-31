@@ -3,28 +3,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              x:Class="Lands.Views.TipsAhorro"
-             x:Class=""
-             Title="Tips de ahorroo">
-    <ListView ItemsSource="{Binding CollectionM_Views, Mode=TwoWay}" HasUnevenRows="True" BindingContext="{Binding Tips}">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="100"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                        </Grid.RowDefinitions>
-                        <StackLayout Grid.Column="1" Grid.Row="0">
+             Title="Tips de">
+    <ContentPage.Content>
+        <ListView ItemsSource="{Binding CollectionM_Views, Mode=TwoWay}" HasUnevenRows="True" > <!--BindingContext="{Binding Tips}"-->
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
                             <Image Source="{Binding Imagen}" Grid.Column="0" Grid.Row="0"/>
-                            <Label Text="{Binding Titulo}" TextColor="Blue"/>
-                            <Label Text="{Binding Intro}" TextColor="Black"/>
-                        </StackLayout> 
-                    </Grid>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+                            <StackLayout Grid.Column="1" Grid.Row="0" >
+                                <Label Text="{Binding Titulo}" TextColor="Blue"/>
+                                <Label Text="{Binding Intro}" TextColor="Black"/>
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
 </ContentPage>

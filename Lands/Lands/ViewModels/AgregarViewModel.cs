@@ -1,12 +1,9 @@
 ﻿namespace Lands.ViewModels
 {
-    using Lands.Views;
     using GalaSoft.MvvmLight.Command;
+    using Lands.Views;
     using System.Windows.Input;
-    using System;
     using Xamarin.Forms;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
 
     public class AgregarViewModel:BaseViewModel
     {

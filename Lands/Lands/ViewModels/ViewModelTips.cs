@@ -1,24 +1,26 @@
 ﻿using Lands.Models;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Text;
 
 namespace Lands.ViewModels
 {
     public class ViewModelTips : INotifyPropertyChanged
     {
+        public ViewModelTips()
+        {
+            MethodLoadView();
+        }
 
         private ObservableCollection<M_Views> _CollectionM_Views;
+
         public ObservableCollection<M_Views> CollectionM_Views
         {
             get
             {
                 if (_CollectionM_Views == null)
                     _CollectionM_Views = new ObservableCollection<M_Views>();
-                return _CollectionM_Views;
+                return this._CollectionM_Views;
             }
             set
             {

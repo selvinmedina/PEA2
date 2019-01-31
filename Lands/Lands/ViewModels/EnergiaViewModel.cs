@@ -2,7 +2,6 @@
 namespace Lands.ViewModels
 {
     using GalaSoft.MvvmLight.Command;
-    using System;
     using Lands.Views;
     using System.Windows.Input;
     using Xamarin.Forms;
