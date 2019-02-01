@@ -66,5 +66,7 @@ namespace Lands.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(PropertyName));
         }
         #endregion
+
+
     }
 }

@@ -9,20 +9,25 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="100"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-                            <Image Source="{Binding Imagen}" Grid.Column="0" Grid.Row="0"/>
-                            <StackLayout Grid.Column="1" Grid.Row="0" >
-                                <Label Text="{Binding Titulo}" TextColor="Blue"/>
-                                <Label Text="{Binding Intro}" TextColor="Black"/>
-                            </StackLayout>
-                        </Grid>
+                        <Frame
+                            CornerRadius="20"
+                            HasShadow="True"
+                            Margin="5">
+                           <Grid>
+                               <Grid.ColumnDefinitions>
+                                   <ColumnDefinition Width="100"/>
+                                   <ColumnDefinition Width="*"/>
+                               </Grid.ColumnDefinitions>
+                               <Grid.RowDefinitions>
+                                   <RowDefinition Height="*"/>
+                               </Grid.RowDefinitions>
+                               <Image Source="{Binding Imagen}" Grid.Column="0" Grid.Row="0"/>
+                               <StackLayout Grid.Column="1" Grid.Row="0" >
+                                   <Label Text="{Binding Titulo}" TextColor="Blue"/>
+                                   <Label Text="{Binding Intro}" TextColor="Black"/>
+                               </StackLayout>
+                           </Grid>
+                        </Frame>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
