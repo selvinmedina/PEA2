@@ -13,6 +13,6 @@
         <tabs:Energia
             BindingContext="{Binding Energia}"/>
         <tabs:TipsAhorro
-            BindingContext="{Binding Tips}"/> <!--BindingContext = new ViewModelTips();-->
+            BindingContext="{Binding Tips}"/>
     </TabbedPage.Children>
 </TabbedPage>

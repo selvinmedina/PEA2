@@ -15,7 +15,7 @@ namespace Lands.Views
         public TipsAhorro()
         {
             InitializeComponent();
-            BindingContext = new ViewModelTips();
+            BindingContext = new ViewModelsTips();
         }
     }
 }

@@ -5,7 +5,7 @@
              x:Class="Lands.Views.TipsAhorro"
              Title="Tips de">
     <ContentPage.Content>
-        <ListView ItemsSource="{Binding CollectionM_Views, Mode=TwoWay}" HasUnevenRows="True" > <!--BindingContext="{Binding Tips}"-->
+        <ListView ItemsSource="{Binding CollectionM_Views, Mode=TwoWay}" HasUnevenRows="True" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -13,6 +13,9 @@
                             CornerRadius="20"
                             HasShadow="True"
                             Margin="5">
+                            <!--<Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Comando}"/>
+                            </Frame.GestureRecognizers>-->
                            <Grid>
                                <Grid.ColumnDefinitions>
                                    <ColumnDefinition Width="100"/>
@@ -21,11 +24,11 @@
                                <Grid.RowDefinitions>
                                    <RowDefinition Height="*"/>
                                </Grid.RowDefinitions>
-                               <Image Source="{Binding Imagen}" Grid.Column="0" Grid.Row="0"/>
-                               <StackLayout Grid.Column="1" Grid.Row="0" >
-                                   <Label Text="{Binding Titulo}" TextColor="Blue"/>
-                                   <Label Text="{Binding Intro}" TextColor="Black"/>
-                               </StackLayout>
+                                <Image Source="{Binding Imagen}" Grid.Column="0" Grid.Row="0"/>
+                                <StackLayout Grid.Column="1" Grid.Row="0">
+                                    <Label Text="{Binding Titulo}" TextColor="Blue"/>
+                                    <Label Text="{Binding Intro}" TextColor="Black"/>
+                                </StackLayout>
                            </Grid>
                         </Frame>
                     </ViewCell>

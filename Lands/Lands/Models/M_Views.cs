@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using Lands.ViewModels;
+using Xamarin.Forms;
 
 namespace Lands.Models
 {

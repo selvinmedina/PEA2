@@ -5,16 +5,15 @@ using System.Runtime.CompilerServices;
 
 namespace Lands.ViewModels
 {
-    public class ViewModelTips : INotifyPropertyChanged
+    public class ViewModelsTips : INotifyPropertyChanged
     {
-        public ViewModelTips()
+        public ViewModelsTips()
         {
             MethodLoadView();
         }
 
         private ObservableCollection<M_Views> _CollectionM_Views;
-
-        public ObservableCollection<M_Views> CollectionM_Views
+        public ObservableCollection <M_Views> CollectionM_Views
         {
             get
             {
@@ -28,7 +27,7 @@ namespace Lands.ViewModels
                 OnPropertyChanged("CollectionM_Views");
             }
         }
-
+        
         public void MethodLoadView()
         {
             CollectionM_Views = new ObservableCollection<M_Views>
@@ -55,7 +54,7 @@ namespace Lands.ViewModels
                 }
             };
         }
-
+     
 
         #region PropertyChanged
 
