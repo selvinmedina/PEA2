@@ -21,7 +21,7 @@
             set;
         }
 
-        public ViewModelsTips Tips
+        public Items Tips
         {
             get;
             set;

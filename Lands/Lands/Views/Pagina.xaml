@@ -13,6 +13,7 @@
         <tabs:Energia
             BindingContext="{Binding Energia}"/>
         <tabs:TipsAhorro
-            BindingContext="{Binding Tips}"/>
+            BindingContext="{Binding Tips}" />
+
     </TabbedPage.Children>
 </TabbedPage>

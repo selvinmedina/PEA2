@@ -9,22 +9,32 @@ using Lands.Models;
 
 namespace Lands.ViewModels
 {
-   public class ListItemViewModel : M_Views
+   public class ListItemViewModel : TipsAhorro
     {
-        #region Comandos
-        public ICommand Comando
-        {
-            get
-            {
-                return new RelayCommand(ListComando);
-            }
-        } 
-        #endregion
+        //ListItems.ItemSelected += ListItems_ItemSelected;
 
-        public async void ListComando()
-        {
-            MainViewModel.GetInstance().Tip = new TipsViewModel(this);
-            await Application.Current.MainPage.Navigation.PushModalAsync(new TipsPage());
+        //private async void ListItems_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        //{
+        //    if (e.SelectedItem != null)
+        //    {
+        //        MainViewModel.GetInstance().Tip = new TipsViewModel(this);
+        //        await Application.Current.MainPage.Navigation.PushModalAsync(new TipsPage());
+        //    }
+
+            //#region Comandos
+            //public ICommand Comando
+            //{
+            //    get
+            //    {
+            //        return new RelayCommand(ListComando);
+            //    }
+            //} 
+            //#endregion
+
+            //public async void ListComando()
+            //{
+            //    MainViewModel.GetInstance().Tip = new TipsViewModel(this);
+            //    await Application.Current.MainPage.Navigation.PushModalAsync(new TipsPage());
+            //}
         }
-    }
 }
