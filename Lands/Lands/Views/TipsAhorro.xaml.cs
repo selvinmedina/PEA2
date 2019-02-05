@@ -19,6 +19,15 @@ namespace Lands.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            ListaItems items = new ListaItems();
+            ListItems.ItemsSource = items._Elementos;
+            ListItems.ItemSelected += ListItems_ItemSelected;
+        }
+
+        private void ListItems_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+
+            Navigation.PushAsync(new TipsPage());
         }
     }
 }

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             x:Class="Lands.Views.Derivados"
+             Title="Prestaciones">
+    <ContentPage.Content>
+
+        <ScrollView>
+            <StackLayout
+                Padding="10,30">
+                <!--<StackLayout
+                    Padding="9"
+                    HorizontalOptions="CenterAndExpand">
+                    <Label                         
+                        Text="Prestaciones"
+                        FontSize="Medium"
+                        VerticalOptions="Center">
+                    </Label>
+                </StackLayout>-->
+                <Grid 
+                    Margin="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label 
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Font="Time New Roman"
+                        Text="Fecha Entrada"
+                        VerticalOptions="Center">
+                    </Label>
+
+                    <DatePicker 
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        TextColor="Blue"
+                        VerticalOptions="Center">
+                    </DatePicker>
+
+                    <Label 
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Font="Time New Roman"
+                        Text="Fecha de salida"
+                        VerticalOptions="Center">
+                    </Label>
+
+                    <DatePicker 
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        TextColor="Blue"
+                        VerticalOptions="Center">
+                    </DatePicker>
+
+                    <Label 
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        Font="Time New Roman"
+                        Text="Salario Mensual"
+                        VerticalOptions="Center">
+                    </Label>
+
+                    <Entry
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        Placeholder="Salario Mensual"
+                        VerticalOptions="Center">
+                    </Entry>
+                    
+
+                </Grid>
+                <StackLayout
+                    Padding="5,80"
+                    Orientation="Horizontal"
+                    VerticalOptions="EndAndExpand">
+                    <ImageButton
+                    Source="Adelante"
+                    HorizontalOptions="EndAndExpand"
+                    Command="{Binding AgregarPago}">
+                    </ImageButton>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
