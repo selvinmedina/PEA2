@@ -5,44 +5,25 @@
              x:Class="Lands.Views.TipsAhorro"
              Title="Tips de Ahorro">
 
-    <ListView x:Name="ListItems">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <TextCell Text="Hola"/>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="Titulo" TargetType="Label">
+                <Setter Property="FontSize" Value="50"/>
+                <Setter Property="TextColor" Value="#142FEA"/>
 
-    <!--<ContentPage.Content>-->
-    <!--<ListView ItemsSource="{Binding CollectionM_Views, Mode=TwoWay}" HasUnevenRows="True" >
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <Frame
-                            CornerRadius="20"
-                            HasShadow="True"
-                            Margin="5">
-                            --><!--<Frame.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding Comando}"/>
-                            </Frame.GestureRecognizers>--><!--
-                           <Grid>
-                               <Grid.ColumnDefinitions>
-                                   <ColumnDefinition Width="100"/>
-                                   <ColumnDefinition Width="*"/>
-                               </Grid.ColumnDefinitions>
-                               <Grid.RowDefinitions>
-                                   <RowDefinition Height="*"/>
-                               </Grid.RowDefinitions>
-                                <Image Source="{Binding Imagen}" Grid.Column="0" Grid.Row="0"/>
-                                <StackLayout Grid.Column="1" Grid.Row="0">
-                                    <Label Text="{Binding Titulo}" TextColor="Blue"/>
-                                    <Label Text="{Binding Intro}" TextColor="Black"/>
-                                </StackLayout>
-                           </Grid>
-                        </Frame>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>-->
-    <!--</ContentPage.Content>-->
+            </Style>
+            <Style x:Key="Parrafo" TargetTipe="Label">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="TextColor" Value="#000000"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="5">
+                <Label Text="Hola"
+                       Style="Titulo"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
 </ContentPage>
